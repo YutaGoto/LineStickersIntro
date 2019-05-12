@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+}
+
 #stage {
   position: absolute;
   top: 0; left: 0;
@@ -83,6 +87,25 @@
 .box .li .inner .img div:nth-child(4) { animation: slide-in 1.0s ease 6.5s forwards, slide-out 1.0s ease 7.5s forwards; }
 .box .li .inner .img div:nth-child(5) { animation: slide-in 1.0s ease 7.5s forwards; }
 
+.text {
+  position: absolute;
+  text-align: center;
+  width:100%;
+  left:0;
+  bottom: -80px;
+  font-size: 22px;
+  animation: text-in 1.5s ease 9.5s forwards;
+}
+
+.text a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.text div:nth-child(1) {
+  color: #FFFFFF;
+}
+
 @keyframes scale {
   from { transform: scale(0); }
   to   { transform: scale(1.3); }
@@ -105,5 +128,10 @@
 
 @keyframes slide-out {
   from { width: 100%; left: 0; }
-  to   { width: 0%; left: 100%;}
+  to   { width: 0%; left: 100%; }
+}
+
+@keyframes text-in {
+  from { bottom: -80px; opacity: 0; }
+  to   { bottom: 60px; opacity: 1; }
 }
